@@ -1,0 +1,27 @@
+.content{
+    display: flex;
+    width: 100vw;
+    margin-top: 50px;
+}
+.content>:first-child{
+    height: calc(100vh - 50px);
+    position: sticky;
+    top: 50px;
+}
+
+.thumbnail-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.app-container{
+    width: calc(100% - 200px);
+    padding-block: 10px;
+    padding-inline: 20px;
+    &>div:first-child{
+        margin-bottom: 30px;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+}

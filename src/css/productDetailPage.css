@@ -1,0 +1,35 @@
+.detailPage{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding-left: 50px;
+    padding-top: 80px;
+    min-height: 100vh;
+    &>img{
+        width: 200px;
+        aspect-ratio: 1/1;
+        background-position: center;
+        background-size: cover;
+        border-radius: 4px;
+        box-shadow: 1px 1px 2px black;
+        margin-bottom: 10px;
+    }
+    &>pre{
+        margin-bottom: 10px;
+    }
+}
+
+.detailPage>pre:nth-child(2), .detailPage>pre:nth-child(3){
+    width: 600px;
+    overflow: hidden;
+    white-space: wrap;
+}
+
+.detailPage.dark{
+    color: white;
+}
+
+.detailPage>pre>span{
+    font-size: 1.06rem;
+    font-weight: 600;
+}

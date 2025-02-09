@@ -1,0 +1,34 @@
+Q: Memoize a result during the lifecycle (mounting and unmounting of a component)
+Ans: 
+1. using local storage or sessional storage:-
+        Data persists even after page refresh! 
+        Needs extra parsing (JSON.stringify/parse).
+        they store the changes permanently unless we remove them manually and does not re-create when the app first runs(initial run).
+2. using global state (context, redux):-
+        Best if multiple components use the same data. 
+        Overhead if only one component needs caching.
+        the context re-creates when the app first runs(initial run).
+
+
+
+Q: Error boundaries.
+Ans:
+1. class-based component:-
+        React provides the lifecycle method componentDidCatch for class components to handle errors.
+2. function-based component:-
+        For functional components, use the react-error-boundary library. first install it using npm i react-error-boundary.
+
+
+Q: why some context value return to their initial state while some not when the component re-renders ?
+Ans:
+This is because the provider of one context will re-created inside a re-rendering component while the second one is not in their scope.
+The context will return to it's original state when the component re-renders.
+
+
+
+Q: Updating a state with its previous value.
+Ans:
+setActiveTabs(prevState => ({ ...prevState, sort }));
+It will prevent us from accidental overwriting the state.
+This is called the Functional state update and it only updates the "sort" property from the previous state.
+
